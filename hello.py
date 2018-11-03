@@ -1,6 +1,6 @@
 def app(environ, start_response):
     """Simplest possible application object"""
-    data = environ[QUERY_STRING]
+    data = environ['QUERY_STRING']
     status = '200 OK'
     response_headers = [
         ('Content-type', 'text/plain'),
