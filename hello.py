@@ -6,5 +6,6 @@ def app(environ, start_response):
         ('Content-type', 'text/plain')
     ]
     start_response(status, response_headers)
+    print(environ['QUERY_STRING'])
     return ['\r\n'.join(environ['QUERY_STRING'].split('&'))]
     # return iter([data])
